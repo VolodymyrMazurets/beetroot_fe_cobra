@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  padding: 32px 5%;
+}
+h1 {
+  margin-bottom: 16px;
+}
+.card {
+  padding: 24px;
+  border: 1px solid black;
+  margin-bottom: 16px;
+}
+.card:last-child {
+  margin-bottom: 0;
+}
+.test-section {
+  padding: 24px 0;
+  width: 50%;
+}
+.center {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 24px;
+    border: 1px solid red;
+    margin: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color .2s ease;
+  }
+  .center:hover {
+      background-color: blue;
+  }
+  .center:hover .icon {
+      fill: red;
+  }
+.test-block {
+    height: 50px;
+    border: 1px solid green;
+}
+.test {
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    fill: black;
+    transition: fill .2s ease;
+}
+li {
+    border: 1px solid red;
+}
+li:nth-child(2) {
+    border-color: green;
+}
+li:nth-child(3) {
+    border-color: purple;
+}
+.list-section div {
+    height: 50px;
+    border: 1px solid purple;
+    margin: 20px 0;
+}
+.list-section div:last-child {
+    margin-top: 100px;
+}
