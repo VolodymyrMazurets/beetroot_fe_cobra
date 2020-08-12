@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto+Slab:wght@700&display=swap");
+@font-face {
+  font-family: "Bazar";
+  src: url("../assets/fonts/JULIET__.TTF") format("truetype");
+}
+
+// Colors
+$title-color: #484A4D;
+$subtitle-color: #38353E;
+$text-color: #383A3C;
+$icon-color: #828C8E;
+$card-bg: #FBFAF6;
+$card-img-placeholder: #E3DFD7;
+$bg-color: #E68965;
+
+// Font-sizes
+$title-size: 180px;
+$subtitle-size: 32px;
+$text-size: 24px;
+$footer-size: 28px;
+
+// Fonts
+$base-font: 'Roboto Slab', serif;
+$sec-font: 'Oswald', sans-serif;
+$title-font: 'Bazar', sans-serif;
