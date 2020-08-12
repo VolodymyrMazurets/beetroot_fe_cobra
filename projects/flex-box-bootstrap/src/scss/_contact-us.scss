@@ -4,10 +4,15 @@
   color: $text-color;
   font-size: $text-size;
   outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
   &::placeholder {
     color: $text-color;
     font-size: $text-size;
     font-style: italic;
+  }
+  &:focus {
+    border-color: $button-color;
   }
 }
 .contact-us {
@@ -15,10 +20,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  flex: 1;
-  max-width: 1160px;
-  padding: 0 15px;
-  margin: auto;
+  height: 100%;
   &__title {
     font-size: $title-size;
     color: $title-color;
@@ -31,34 +33,36 @@
     margin-bottom: 56px;
     font-family: $sec-font;
   }
-  &__row {
-    display: flex;
-  }
-  &__list {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    max-width: 297px;
-  }
+  // &__row {
+  //   display: flex;
+  // }
+  // &__list {
+  //   display: flex;
+  //   list-style: none;
+  //   flex-wrap: wrap;
+  //   max-width: 297px;
+  //   margin-bottom: 0;
+  // }
   &__list-item {
     border-radius: 6px;
     border: 1px solid $icon-color;
     height: 141px;
-    width: 141px;
-    margin-right: 15px;
-    margin-bottom: 18px;
+    // width: 141px;
+    // margin-right: 15px;
+    // margin-bottom: 18px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    &:nth-child(2n + 2) {
-      margin-right: 0;
-    }
-    &:nth-child(n + 3) {
-      margin-bottom: 0;
-    }
+    // &:nth-child(2n + 2) {
+    //   margin-right: 0;
+    // }
+    // &:nth-child(n + 3) {
+    //   margin-bottom: 0;
+    // }
     &:hover {
       background-color: $hover-color;
       border-color: $hover-color;
       .contact-us__link {
         color: $white;
+        text-decoration: none;
       }
     }
   }
@@ -74,36 +78,33 @@
     transition: color 0.3s ease;
   }
   &__form {
-    padding-left: 19px;
+    // padding-left: 19px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
+    flex: 1;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: stretch;
   }
-  &__inputs-wrapper {
-    display: flex;
-    margin-bottom: 18px;
-    flex-wrap: wrap;
-  }
+  // &__inputs-wrapper {
+  //   display: flex;
+  //   margin-bottom: 18px;
+  //   flex-wrap: wrap;
+  // }
   &__input {
-    flex-basis: calc(50% - 8px);
-    max-width: calc(50% - 8px);
-    margin-right: 15px;
-    margin-bottom: 18px;
+    // flex-basis: calc(50% - 8px);
+    // max-width: calc(50% - 8px);
+    // margin-right: 15px;
+    // margin-bottom: 18px;
     height: 50px;
     padding: 0 22px;
     @extend %input-styles;
 
-    &:focus {
-      border-color: $button-color;
-    }
-
-    &:nth-child(2n + 2) {
-      margin-right: 0;
-    }
-    &:nth-child(n + 3) {
-      margin-bottom: 0;
-    }
+    // &:nth-child(2n + 2) {
+    //   margin-right: 0;
+    // }
+    // &:nth-child(n + 3) {
+    //   margin-bottom: 0;
+    // }
   }
   &__textarea-wrapper {
     flex: 1 1;
@@ -116,6 +117,7 @@
     border-right: none;
     width: 100%;
     resize: none;
+    min-height: 160px;
   }
   &__btn {
     width: 41px;
@@ -135,6 +137,9 @@
     }
     &:active {
       background-color: darken($color: $button-color, $amount: 10%);
+    }
+    &:focus {
+      outline: none;
     }
   }
 }
