@@ -4,3 +4,8 @@
   align-items: $ai;
   flex-direction: $fd;
 }
+@mixin text($size, $weight: 400, $color: #000000) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}

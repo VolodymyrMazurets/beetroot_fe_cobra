@@ -1,24 +1,28 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body {
-    min-height: 100vh;
-    font-size: 100%;
+html,
+body {
+  min-height: 100vh;
+  font-size: 100%;
 }
 body {
-    color: $text-color;
+  color: $text-color;
+  background-color: $bg-color;
+  padding: 20px 0;
+  font-family: $base-font;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 .container {
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: auto;
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: auto;
 }
