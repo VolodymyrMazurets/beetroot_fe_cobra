@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 100%;
+  background-color: #19202b;
+  color: $white;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+section {
+  background: url("../img/Background@1X.jpeg") no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 100vh;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+  position: relative;
+}
+.card {
+  width: 100%;
+  max-width: 235px;
+  background-color: $green;
+  padding: 20px 18px 20px 36px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 0;
+//   transition: z-index .3s ease;
+  &:hover {
+      z-index: 10;
+  }
+  &.first {
+    top: 20%;
+    left: 0;
+  }
+  &.second {
+      top: 30%;
+      left: 20%;
+  }
+  &.third {
+      top: 50%;
+      left: 10%;
+  }
+  &.fourth {
+      left: 40%;
+      top: 15%;
+  }
+  &.fifth {
+      left: 42%;
+      top: 45%;
+  }
+  &.sixth {
+      left: 55%;
+      top: 50%;
+  }
+  &.seventh {
+      left: 80%;
+      top: 20%;
+  }
+  &.eighth {
+      position: fixed;
+      left: 85%;
+      top: 10%;
+  }
+  &.second,
+  &.fourth,
+  &.sixth,
+  &.eighth {
+    background-color: $blue;
+    &:before {
+      border-left-color: $blue;
+    }
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+    border-left: 20px solid #6ca912;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 60px;
+    width: 40px;
+    height: 40px;
+  }
+  &__img {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    width: 14px;
+    height: 16px;
+    fill: $icon;
+  }
+  &__text,
+  &__author {
+    font-weight: 700;
+    line-height: 1.4;
+    opacity: 0.75;
+    font-size: 13px;
+  }
+  &__author {
+    font-size: 14px;
+  }
+}
