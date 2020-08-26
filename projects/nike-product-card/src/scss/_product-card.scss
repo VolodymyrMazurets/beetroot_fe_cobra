@@ -1,0 +1,222 @@
+$style: "product-card";
+.#{$style} {
+  background-color: $white;
+  @include flex(stretch, stretch);
+  &__col {
+    @include flex(flex-start, flex-start, column);
+    position: relative;
+    flex: 1;
+    &:first-child {
+      padding: 39px 41px 22px 44px;
+      align-items: center;
+      background-color: $col-bg;
+    }
+    &:last-child {
+      flex-basis: 260px;
+      max-width: 260px;
+    }
+  }
+  &__info {
+    padding: 43px 32px;
+  }
+  &__badge {
+    background-color: $badge-color;
+    @include flex(center, center);
+    height: 25px;
+    padding: 0 8px;
+    max-width: fit-content;
+    @include text($badge-size, 400, $white);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  &__title {
+    @include text($title-size, 400, $black);
+    margin-bottom: 18px;
+    span {
+      color: $violet-color;
+    }
+  }
+  &__rating {
+    @include flex(flex-start, center);
+    margin-bottom: 18px;
+  }
+  &__rating-name {
+    @include text($small-size, 400, $black);
+    margin-right: 15px;
+  }
+  &__rating-list {
+    @include flex(flex-start, center);
+  }
+  &__rating-list-item {
+    margin-right: 4px;
+    svg {
+      fill: $black;
+    }
+    &--grey {
+      svg {
+        fill: $grey-color;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__value {
+    @include text($medium-size, 300, $black);
+    margin-bottom: 26px;
+  }
+  &__label {
+    display: inline-block;
+    @include text($small-size, 400, $black);
+    margin-bottom: 4px;
+  }
+  &__radios {
+    width: 100%;
+    @include flex(space-between, center);
+    margin-bottom: 32px;
+    input {
+      display: none;
+    }
+    span {
+      $size: 25px;
+      @include flex(center, center);
+      width: $size;
+      height: $size;
+      border: 1px solid transparent;
+    }
+    input:checked + span {
+      border-color: $black;
+    }
+  }
+  &__radio {
+    cursor: pointer;
+    @include transition(background-color);
+    &:hover {
+      background-color: rgba($black, 0.3);
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn {
+    width: 120px;
+    background-color: transparent;
+    height: 32px;
+    border: 1px solid $black;
+    @include flex(center, center);
+    text-transform: uppercase;
+    @include text($small-size, 400, $black);
+    cursor: pointer;
+    @include transition(background-color);
+    &:hover {
+      background-color: darken($white, 10%);
+    }
+    &--submit {
+      background-color: $btn-color;
+      color: $white;
+      border-color: $btn-color;
+      margin-bottom: 6px;
+      &:hover {
+        background-color: darken($btn-color, 5%);
+      }
+    }
+  }
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+    max-height: 320px;
+    margin-bottom: 27px;
+    img {
+      max-width: 100%;
+      height: 120%;
+      object-fit: cover;
+      transform: rotate(-21deg);
+      pointer-events: none;
+    }
+  }
+  &__gallery {
+    @include flex(center, center);
+  }
+  &__gallery-item {
+    margin-right: 18px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__gallery-link {
+    display: inline-flex;
+    border: 3px solid $white;
+  }
+  &__add-btn {
+    @include size(22px);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 24px;
+    bottom: 65px;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      &:before,
+      &:after {
+        background-color: $grey-color;
+      }
+    }
+    &:before,
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 22px;
+      height: 1px;
+      background-color: $black;
+      position: absolute;
+      @include transition(background-color);
+    }
+    &:before {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &:after {
+      left: 0;
+      transform: rotate(90deg) translateY(-50%);
+    }
+  }
+  &__close-btn {
+    @include size(16px);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 11px;
+    top: 9px;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      &:before,
+      &:after {
+        background-color: $black;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 19px;
+      height: 1px;
+      background-color: $grey-color;
+      position: absolute;
+      @include transition(background-color);
+    }
+    &:before {
+      top: 50%;
+      left: 0;
+      transform: rotate(45deg);
+    }
+    &:after {
+      left: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

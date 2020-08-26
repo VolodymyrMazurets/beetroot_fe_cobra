@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100vh;
+    font-size: 100%;
+}
+body {
+    font-family: $main-font;
+    background-color: $bg-color;
+}
+ul {
+    list-style: none;
+}
+main {
+    padding: 25px 0 92px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 15px;
+}
