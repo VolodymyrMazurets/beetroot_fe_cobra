@@ -2,10 +2,33 @@ $style: "product-card";
 .#{$style} {
   background-color: $white;
   @include flex(stretch, stretch);
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: rgba($white, 0.5);
+  }
+  &:before {
+    left: -20px;
+    right: -20px;
+    top: 15px;
+    bottom: 15px;
+    z-index: 0;
+  }
+  &:after {
+    left: -40px;
+    right: -40px;
+    top: 30px;
+    bottom: 30px;
+    z-index: 1;
+  }
   &__col {
     @include flex(flex-start, flex-start, column);
     position: relative;
     flex: 1;
+    z-index: 2;
     &:first-child {
       padding: 39px 41px 22px 44px;
       align-items: center;

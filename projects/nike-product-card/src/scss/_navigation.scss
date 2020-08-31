@@ -3,6 +3,11 @@ $style: "navigation";
   padding-top: 26px;
   padding-bottom: 26px;
   @include flex(space-between, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   &__list {
     display: flex;
   }
