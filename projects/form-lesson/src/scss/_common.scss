@@ -10,4 +10,12 @@ body {
 body {
   background-color: #c3c3c3;
   font-size: 100%;
+  font-family: $main-font;
+}
+a {
+  display: inline-block;
+  color: inherit;
+}
+.mb-28 {
+  margin-bottom: 28px;
 }

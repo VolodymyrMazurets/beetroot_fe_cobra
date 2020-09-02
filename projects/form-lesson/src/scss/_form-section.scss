@@ -1,0 +1,125 @@
+$style: "form-section";
+
+.#{$style} {
+  padding: 32px;
+  min-height: 100vh;
+  @include flex(center, center);
+  position: relative;
+  background: url("../img/bg-gradient.png") no-repeat center;
+  background-size: cover;
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    @include position();
+    z-index: 0;
+    background: url("../img/bg-image.png") no-repeat;
+    background-size: cover;
+  }
+  &__form {
+    z-index: 1;
+    max-width: 340px;
+    width: 100%;
+    background-color: $white;
+  }
+  &__header {
+    background-color: $header-bg;
+    padding: 24px;
+    @include flex(space-between, center);
+  }
+  &__header-title {
+    @include text($title-size, 700, $title-color);
+    margin-bottom: 4px;
+  }
+  &__header-subtitle {
+    @include text($subtitle-size, 400, $subtitle-color);
+  }
+  &__header-value {
+    @include text($value-size, 700, $value-color);
+  }
+  &__form-inner {
+    padding: 45px 24px 24px;
+    @include flex(stretch, stretch, column);
+  }
+  &__form-label {
+    @include text($input-size, 400, $label-color);
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  &__form-input {
+    @extend %input;
+    &--cvv {
+      width: 96px;
+    }
+  }
+  &__row {
+    margin-bottom: 26px;
+    @include flex(stretch, flex-end);
+    &--cvv {
+      align-items: center;
+      padding-bottom: 31px;
+      border-bottom: 1px solid $light-grey;
+    }
+  }
+  &__col {
+    @include flex(flex-start, flex-start, column);
+    flex: 1;
+    width: 100%;
+    margin-right: 16px;
+    &--small-margin {
+      margin-right: 9px;
+    }
+  }
+  &__select-wrapper {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    &:before {
+      content: "";
+      display: inline-block;
+      border: 5px solid $cool-grey;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      position: absolute;
+      right: 12px;
+      top: 37%;
+      transform: rotate(-135deg);
+      pointer-events: none;
+    }
+    &--small {
+      max-width: 96px;
+    }
+  }
+  &__select {
+    @extend %input;
+    appearance: none;
+  }
+  &__text {
+    @include text($link-size, 400, $label-color);
+    a {
+      @include transition(color);
+      &:hover {
+        color: #25b86a;
+      }
+    }
+  }
+  &__btn {
+    height: 48px;
+    background-color: $btn-bg;
+    font-family: inherit;
+    @include text($btn-size, 700, $white);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 22px;
+  }
+  &__link {
+    max-width: fit-content;
+    margin: auto;
+    @include text($link-size, 400, $label-color);
+    @include transition(color);
+    &:hover {
+      color: #25b86a;
+    }
+  }
+}

@@ -21,29 +21,34 @@
 				<span class="form-section__header-value">$88</span>
 			</header>
 			<div class="form-section__form-inner">
-				<label for="number">Credit card number</label>
-				<input type="text" name="number" id="number" class="form-section__input">
+				<label class="form-section__form-label" for="number">Credit card number</label>
+				<input type="number" pattern="[0-9]{13,16}" name="number" id="number" class="form-section__form-input mb-28" required>
 				<div class="form-section__row">
 					<div class="form-section__col">
-						<label for="expiration">Expiration date</label>
-						<select id="expiration" name="expiration" class="form-section__select">
-							<option>Month</option>
+						<label class="form-section__form-label" for="expiration">Expiration date</label>
+						<div class="form-section__select-wrapper">
+							<select id="expiration" name="expiration" class="form-section__select">
+								<option>Month</option>
+								<option>Пункт 2</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-section__select-wrapper form-section__select-wrapper--small">
+						<select id="year" name="year" class="form-section__select">
+							<option>Year</option>
 							<option>Пункт 2</option>
 						</select>
 					</div>
-					<select id="year" name="year" class="form-section__select">
-						<option>Year</option>
-						<option>Пункт 2</option>
-					</select>
 				</div>
-				<div class="form-section__row">
-					<div class="form-section__col">
-						<label for="cvv">CVV</label>
-						<input type="text" name="cvv" id="cvv">
+				<label class="form-section__form-label" for="cvv">CVV</label>
+				<div class="form-section__row form-section__row--cvv">
+					<div class="form-section__col form-section__col--small-margin">
+						<input class="form-section__form-input form-section__form-input--cvv" type="text" name="cvv"
+							id="cvv">
 					</div>
 					<p class="form-section__text">3 or 4 digits - <a href="#">view example</a></p>
 				</div>
-				<button type="submit">Pay</button>
+				<button class="form-section__btn" type="submit">Pay</button>
 				<a href="#" class="form-section__link">Cancel order</a>
 			</div>
 		</form>
