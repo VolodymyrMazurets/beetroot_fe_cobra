@@ -1,0 +1,43 @@
+$style: "car-info";
+.#{$style} {
+  padding: 105px 0 100px;
+  &__list {
+    @include flex(space-between, stretch);
+    list-style: none;
+  }
+  &__item {
+    margin-right: 30px;
+    @include flex(flex-start, center, column);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__name {
+    @include text($small-size, 400, $white);
+    font-family: $sec-font;
+    margin-bottom: 20px;
+  }
+  &__value {
+    @include text($title-size, 400, $white);
+    margin-bottom: 10px;
+    span {
+      font-family: $sec-font;
+      font-size: $small-size;
+    }
+    &--speed {
+      position: relative;
+      &:after {
+        content: "+";
+        position: absolute;
+        top: 0;
+        right: 40px;
+        font-family: $sec-font;
+        @include text($small-size, 400, $white);
+      }
+    }
+  }
+  &__descr {
+    @include text($small-size, 400, $light-red);
+    font-family: $sec-font;
+  }
+}

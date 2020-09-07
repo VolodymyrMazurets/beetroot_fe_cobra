@@ -1,0 +1,18 @@
+$style: 'nav';
+.#{$style} {
+    padding: 36px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include z-index(navigation);
+    &__container {
+        @include flex(space-between, center);
+    }
+    &__burger {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+    }
+}

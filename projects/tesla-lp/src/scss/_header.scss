@@ -1,0 +1,81 @@
+$style: "header";
+.#{$style} {
+  position: relative;
+  &__info {
+    position: absolute;
+    @include position();
+    z-index: 1;
+    padding-top: 120px;
+    pointer-events: none;
+  }
+  &__title {
+    @include text($title-size, 400, $white);
+    font-family: $main-font;
+    margin-bottom: 40px;
+  }
+  &__text {
+    max-width: 285px;
+    @include text($small-size, 400, $white);
+    font-family: $sec-font;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
+  &__link {
+    @include flex(center, center);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid $white;
+    height: 90px;
+    padding: 0 62px;
+    max-width: fit-content;
+    @include text($small-size, 700, $white);
+    font-family: $sec-font;
+    @include transition(background-color);
+    pointer-events: all;
+    &:hover {
+        background-color: $dark-red;
+        text-decoration: none;
+        color: $white;
+    }
+  }
+  &__slider-wrapper {
+    position: relative;
+  }
+  &__slider {
+    position: relative;
+  }
+  &__slider-item {
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      z-index: 0;
+      position: absolute;
+      @include position();
+      background: rgba(0, 0, 0, 0.3);
+    }
+    img {
+      width: 100%;
+      object-fit: coverß;
+    }
+  }
+  &__bullets {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    list-style: none;
+    @include flex(flex-start, center);
+    li {
+      @include size(15px, true);
+      background-color: $dark;
+      margin-right: 20px;
+      cursor: pointer;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.uk-active {
+        background-color: $white;
+      }
+    }
+  }
+}

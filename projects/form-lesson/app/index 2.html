@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<title>Payment form</title>
+	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<section class="form-section">
+		<form class="form-section__form" name="credit_form">
+			<header class="form-section__header">
+				<div class="form-section__header-col">
+					<h2 class="form-section__header-title">Harold Finch</h2>
+					<h3 class="form-section__header-subtitle">Your Total</h3>
+				</div>
+				<span class="form-section__header-value">$88</span>
+			</header>
+			<div class="form-section__form-inner">
+				<label class="form-section__form-label" for="number">Credit card number</label>
+				<input type="number" pattern="[0-9]{13,16}" name="number" id="number" class="form-section__form-input mb-28" required>
+				<div class="form-section__row">
+					<div class="form-section__col">
+						<label class="form-section__form-label" for="expiration">Expiration date</label>
+						<div class="form-section__select-wrapper">
+							<select id="expiration" name="expiration" class="form-section__select">
+								<option>Month</option>
+								<option>Пункт 2</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-section__select-wrapper form-section__select-wrapper--small">
+						<select id="year" name="year" class="form-section__select">
+							<option>Year</option>
+							<option>Пункт 2</option>
+						</select>
+					</div>
+				</div>
+				<label class="form-section__form-label" for="cvv">CVV</label>
+				<div class="form-section__row form-section__row--cvv">
+					<div class="form-section__col form-section__col--small-margin">
+						<input class="form-section__form-input form-section__form-input--cvv" type="text" name="cvv"
+							id="cvv">
+					</div>
+					<p class="form-section__text">3 or 4 digits - <a href="#">view example</a></p>
+				</div>
+				<button class="form-section__btn" type="submit">Pay</button>
+				<a href="#" class="form-section__link">Cancel order</a>
+			</div>
+		</form>
+	</section>
+
+	<script src="js/bundle.js"></script>
+</body>
+
+</html>

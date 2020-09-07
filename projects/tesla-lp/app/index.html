@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<title>Tesla Lending Page</title>
+	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<nav class="nav">
+			<div class="uk-container nav__container">
+				<a href="/" class="nav__logo">
+					<img src="./img/logo.png" alt="logo">
+				</a>
+				<a href="#" class="nav__burger">
+					<img src="./img/burger.svg" alt="burger">
+				</a>
+			</div>
+		</nav>
+
+		<div class="header__info">
+			<div class="uk-container">
+				<h1 class="header__title">Roadster</h1>
+				<p class="header__text">Самый быстрый автомобиль в мире, с рекордным ускорением, дальностью и производительностью.</p>
+				<a href="#" class="header__link">Хочу тест драйв</a>
+			</div>
+		</div>
+
+		<div uk-slider class="header__slider">
+
+			<div class="uk-position-relative uk-visible-toggle uk-light header__slider-wrapper" tabindex="-1">
+
+				<ul class="uk-slider-items uk-child-width-1-1 header__slider-list">
+					<li class="header__slider-item">
+						<img src="./img/bg-1.jpg" alt="">
+					</li>
+					<li class="header__slider-item">
+						<img src="./img/bg-2.jpg" alt="">
+					</li>
+					<li class="header__slider-item">
+						<img src="./img/bg-3.jpg" alt="">
+					</li>
+				</ul>
+
+			</div>
+
+			<ul class="uk-slider-nav uk-flex-start header__bullets uk-container"></ul>
+
+		</div>
+
+	</header>
+
+	<section class="car-info">
+		<div class="uk-container">
+			<ul class="car-info__list">
+				<li class="car-info__item">
+					<span class="car-info__name">Двигатель</span>
+					<span class="car-info__value">2,1 <span>сек</span></span>
+					<span class="car-info__descr">разгон до 100 км</span>
+				</li>
+				<li class="car-info__item">
+					<span class="car-info__name">Батарея</span>
+					<span class="car-info__value">1000 <span>км</span> </span>
+					<span class="car-info__descr">запас хода</span>
+				</li>
+				<li class="car-info__item">
+					<span class="car-info__name">Скорость</span>
+					<span class="car-info__value car-info__value--speed">400 <span>км/ч</span></span>
+					<span class="car-info__descr">макс скорость</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
+	<script src="js/bundle.js"></script>
+</body>
+
+</html>

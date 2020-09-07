@@ -1,0 +1,23 @@
+// Colors
+$white: #fff;
+$dark: #0B0B0B;
+$light-red: #B70021;
+$dark-red: #690102;
+
+// Font sizes
+@function calcRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+  }
+
+$title-size: calcRem(96px);
+$menu-size: calcRem(48px);
+$big-size: calcRem(36px);
+$small-size: calcRem(24px);
+
+// Font-family
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap');
+$main-font: 'Roboto', sans-serif;
+$sec-font: 'Roboto Condensed', sans-serif;
+
