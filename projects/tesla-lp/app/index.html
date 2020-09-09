@@ -12,13 +12,50 @@
 
 <body>
 
+	<div id="menu" class="menu">
+		<div class="uk-container">
+			<a href="#" class="menu__close-btn" id="close">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001"
+					style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<g>
+						<g>
+							<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+			L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+			c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+			l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+			L284.286,256.002z" />
+						</g>
+					</g>
+				</svg>
+			</a>
+			<ul class="menu__list">
+				<li class="menu__item">
+					<a href="#" class="menu__link">Узнать цену</a>
+				</li>
+				<li class="menu__item menu__item--active">
+					<a href="#" class="menu__link">Характеристики</a>
+				</li>
+				<li class="menu__item">
+					<a href="#" class="menu__link">Тест Драйв</a>
+				</li>
+				<li class="menu__item">
+					<a href="#" class="menu__link">Новости</a>
+				</li>
+				<li class="menu__item">
+					<a href="#" class="menu__link">Контакты</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
 	<header class="header">
 		<nav class="nav">
 			<div class="uk-container nav__container">
 				<a href="/" class="nav__logo">
 					<img src="./img/logo.png" alt="logo">
 				</a>
-				<a href="#" class="nav__burger">
+				<a href="#" id="burger" class="nav__burger">
 					<img src="./img/burger.svg" alt="burger">
 				</a>
 			</div>
@@ -77,7 +114,8 @@
 				</li>
 			</ul>
 			<div class="car-info__video-wrapper">
-				<iframe id="ytplayer" type="text/html" src="http://www.youtube.com/embed/ijcAwrWMi0g" frameborder="0" />
+				<iframe id="ytplayer" type="text/html" src="http://www.youtube.com/embed/ijcAwrWMi0g"
+					frameborder="0"></iframe>
 			</div>
 		</div>
 	</section>

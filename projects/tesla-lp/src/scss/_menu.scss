@@ -1,0 +1,64 @@
+$style: "menu";
+.#{$style} {
+  display: none;
+  background-color: $black;
+  position: fixed;
+  @include z-index(popup);
+  @include position();
+  animation: fadeIn 200ms;
+  .uk-container {
+    flex: 1;
+    position: relative;
+    @include flex(flex-start, center);
+  }
+  &__close-btn {
+    @include size(70px);
+    position: absolute;
+    top: 56px;
+    right: 0;
+    svg {
+      @include svg(70px, $white);
+    }
+    &:hover {
+      svg {
+        fill: darken($color: $white, $amount: 20%);
+      }
+    }
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    @include text($menu-size, 700, $white);
+    font-family: $sec-font;
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+    border-bottom: 3px solid $light-red;
+    @include transition(border-color);
+
+    &:hover {
+      border-bottom-color: $white;
+    }
+    &--active {
+      border-bottom-color: $white;
+    }
+  }
+  &__link {
+    color: inherit;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
