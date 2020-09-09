@@ -20,23 +20,6 @@ $style: "header";
     line-height: 28px;
     margin-bottom: 25px;
   }
-  &__link {
-    @include flex(center, center);
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid $white;
-    height: 90px;
-    padding: 0 62px;
-    max-width: fit-content;
-    @include text($small-size, 700, $white);
-    font-family: $sec-font;
-    @include transition(background-color);
-    pointer-events: all;
-    &:hover {
-        background-color: $dark-red;
-        text-decoration: none;
-        color: $white;
-    }
-  }
   &__slider-wrapper {
     position: relative;
   }

@@ -4,6 +4,7 @@ $style: "car-info";
   &__list {
     @include flex(space-between, stretch);
     list-style: none;
+    margin-bottom: 100px;
   }
   &__item {
     margin-right: 30px;
@@ -39,5 +40,12 @@ $style: "car-info";
   &__descr {
     @include text($small-size, 400, $light-red);
     font-family: $sec-font;
+  }
+  &__video-wrapper {
+    width: 100%;
+    iframe {
+      width: 100%;
+      height: 400px;
+    }
   }
 }

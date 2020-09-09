@@ -1,0 +1,34 @@
+$style: "about";
+
+.#{$style} {
+  padding: 100px 0;
+  &__img-wrapper {
+    @include padding-hack(50%, contain);
+    margin-bottom: 100px;
+  }
+  &__list {
+    @include flex(stretch, stretch);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &__item {
+    padding-right: 38px;
+    @include flex();
+    &:last-child {
+      padding-right: 0;
+      list-style-position: 38px;
+    }
+  }
+  &__number {
+    @include text($small-size, 400, $dark-red);
+    font-family: $sec-font;
+    margin-right: 75px;
+  }
+  &__text {
+    @include text($small-size, 400, $white);
+    font-family: $sec-font;
+    padding-top: 30px;
+    margin: 0;
+  }
+}

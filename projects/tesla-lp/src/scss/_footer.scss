@@ -1,0 +1,41 @@
+$style: "footer";
+.#{$style} {
+  padding: 82px 0 20px;
+  background-color: $dark-red;
+  @include flex(flex-start, center, column);
+  &__btn {
+    margin: 0 auto 82px;
+  }
+  &__list {
+    @include flex();
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    @include text($small-size, 700, $white);
+    font-family: $sec-font;
+    position: relative;
+    margin-right: 24px;
+    a {
+      color: $white;
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+    &:after {
+      content: "|";
+      position: absolute;
+      right: -16px;
+      top: 0;
+      bottom: 0;
+      color: $white;
+    }
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
