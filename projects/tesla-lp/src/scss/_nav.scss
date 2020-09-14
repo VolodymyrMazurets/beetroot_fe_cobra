@@ -1,18 +1,37 @@
-$style: 'nav';
+$style: "nav";
 .#{$style} {
-    padding: 36px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    @include z-index(navigation);
-    &__container {
-        @include flex(space-between, center);
+  padding: 36px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include z-index(navigation);
+  @include transition();
+  &--filled {
+    background-color: rgba($dark, .7);
+    padding: 20px 0;
+  }
+  &__container {
+    @include flex(space-between, center);
+  }
+  &__logo {
+    width: 140px;
+    height: auto;
+    @media screen and (min-width: 576px) {
+      width: initial;
+      height: initial;
     }
-    &__burger {
-        border: none;
-        background-color: transparent;
-        outline: none;
-        cursor: pointer;
+  }
+  &__burger {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    @media screen and (min-width: 576px) {
+      width: 60px;
+      height: 60px;
     }
+  }
 }

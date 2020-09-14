@@ -1,29 +1,54 @@
 $style: "car-info";
 .#{$style} {
-  padding: 105px 0 100px;
+  padding: 50px 0;
+  @media screen and (min-width: 576px) {
+    padding: 105px 0 100px;
+  }
   &__list {
-    @include flex(space-between, stretch);
+    @include flex(flex-start, center, column);
     list-style: none;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    padding: 0;
+    @media screen and (min-width: 576px) {
+      @include flex(space-between, stretch);
+      margin-bottom: 100px;
+    }
   }
   &__item {
-    margin-right: 30px;
+    margin-bottom: 30px;
     @include flex(flex-start, center, column);
     &:last-child {
-      margin-right: 0;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 576px) {
+      margin-bottom: 0;
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
   &__name {
-    @include text($small-size, 400, $white);
+    @include text($small-size-mobile, 400, $white);
     font-family: $sec-font;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+    @media screen and (min-width: 992px) {
+      font-size: $small-size;
+      margin-bottom: 20px;
+    }
   }
   &__value {
-    @include text($title-size, 400, $white);
+    @include text($menu-size, 400, $white);
     margin-bottom: 10px;
     span {
       font-family: $sec-font;
-      font-size: $small-size;
+      font-size: $small-size-mobile;
+    }
+    @media screen and (min-width: 992px) {
+      font-size: $title-size;
+      span {
+        font-size: $small-size;
+      }
     }
     &--speed {
       position: relative;
@@ -45,7 +70,10 @@ $style: "car-info";
     width: 100%;
     iframe {
       width: 100%;
-      height: 400px;
+      height: 300px;
+      @media screen and (min-width: 576px) {
+        height: 400px;
+      }
     }
   }
 }

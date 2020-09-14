@@ -1,16 +1,25 @@
 $style: "footer";
 .#{$style} {
-  padding: 82px 0 20px;
+  padding: 30px 0 20px;
   background-color: $dark-red;
   @include flex(flex-start, center, column);
+  @media screen and (min-width: 576px) {
+    padding: 82px 0 20px;
+  }
   &__btn {
-    margin: 0 auto 82px;
+    margin: 0 auto 30px;
+    @media screen and (min-width: 576px) {
+      margin-bottom: 82px;
+    }
   }
   &__list {
-    @include flex();
+    @include flex(center, center);
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
+    @media screen and (min-width: 576px) {
+    }
   }
   &__item {
     @include text($small-size, 700, $white);
@@ -19,9 +28,11 @@ $style: "footer";
     margin-right: 24px;
     a {
       color: $white;
-      &:hover {
-        color: $white;
-        text-decoration: none;
+      @media screen and (min-width: 992px) {
+        &:hover {
+          color: $white;
+          text-decoration: none;
+        }
       }
     }
     &:after {

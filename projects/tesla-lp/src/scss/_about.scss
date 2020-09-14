@@ -1,34 +1,55 @@
 $style: "about";
 
 .#{$style} {
-  padding: 100px 0;
+  padding: 50px 0;
+  @media screen and (min-width: 576px) {
+    padding: 100px 0;
+  }
   &__img-wrapper {
     @include padding-hack(50%, contain);
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    @media screen and (min-width: 576px) {
+      margin-bottom: 100px;
+    }
   }
   &__list {
-    @include flex(stretch, stretch);
+    @include flex(stretch, stretch, column);
     padding: 0;
     margin: 0;
     list-style: none;
+    @media screen and (min-width: 768px) {
+      @include flex(stretch, stretch);
+    }
   }
   &__item {
-    padding-right: 38px;
     @include flex();
+    margin-bottom: 30px; 
     &:last-child {
-      padding-right: 0;
-      list-style-position: 38px;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 576px) {
+      padding-right: 38px;
+      margin-bottom: 0;
+      &:last-child {
+        padding-right: 0;
+      }
     }
   }
   &__number {
     @include text($small-size, 400, $dark-red);
     font-family: $sec-font;
-    margin-right: 75px;
+    margin-right: 40px;
+    @media screen and (min-width: 576px) {
+      margin-right: 75px;
+    }
   }
   &__text {
-    @include text($small-size, 400, $white);
+    @include text($small-size-mobile, 400, $white);
     font-family: $sec-font;
-    padding-top: 30px;
     margin: 0;
+    @media screen and (min-width: 576px) {
+      padding-top: 30px;
+      font-size: $small-size;
+    }
   }
 }

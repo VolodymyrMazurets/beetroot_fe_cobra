@@ -1,6 +1,11 @@
 $style: "header";
 .#{$style} {
   position: relative;
+  min-height: 100vh;
+  @media screen and (min-width: 576px) {
+    min-height: 70vh;
+  }
+
   &__info {
     position: absolute;
     @include position();
@@ -9,16 +14,23 @@ $style: "header";
     pointer-events: none;
   }
   &__title {
-    @include text($title-size, 400, $white);
+    @include text($menu-size, 400, $white);
     font-family: $main-font;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    @media screen and (min-width: 576px) {
+      font-size: $title-size;
+      margin-bottom: 40px;
+    }
   }
   &__text {
     max-width: 285px;
-    @include text($small-size, 400, $white);
+    @include text($small-size-mobile, 400, $white);
     font-family: $sec-font;
     line-height: 28px;
     margin-bottom: 25px;
+    @media screen and (min-width: 576px) {
+      font-size: $small-size;
+    }
   }
   &__slider-wrapper {
     position: relative;
@@ -28,6 +40,10 @@ $style: "header";
   }
   &__slider-item {
     position: relative;
+    min-height: 100vh;
+    @media screen and (min-width: 576px) {
+      min-height: 70vh;
+    }
     &:before {
       content: "";
       display: block;
@@ -38,7 +54,11 @@ $style: "header";
     }
     img {
       width: 100%;
-      object-fit: coverß;
+      object-fit: cover;
+      height: 100%;
+      @media screen and (min-width: 576px) {
+        // height: initial;
+      }
     }
   }
   &__bullets {

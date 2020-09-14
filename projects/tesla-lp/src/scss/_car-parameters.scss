@@ -2,38 +2,58 @@ $style: "car-parameters";
 
 .#{$style} {
   &__row {
-    @include flex(stretch, stretch);
-    margin-bottom: 100px;
+    @include flex(flex-start, stretch, column);
+    margin-bottom: 50px;
     &:last-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 576px) {
+      @include flex(stretch, stretch);
+      margin-bottom: 100px;
     }
   }
   &__col {
     @include flex(center, flex-start, column);
     position: relative;
-    flex-basis: 50%;
-    padding-right: 30px;
-    &:last-child {
+    order: 0;
+    &--ordered {
+      order: 1;
+    }
+
+    @media screen and (min-width: 576px) {
+      flex-basis: 50%;
+      padding-right: 30px;
+      &--ordered {
+        order: 0;
+      }
+      &:last-child {
         padding-right: 0;
         padding-left: 30px;
+      }
     }
   }
   &__title {
-    position: absolute;
-    top: 0;
-    left: 0;
     @include text($big-size, 400, $dark-red);
     font-family: $sec-font;
-    &--bottom {
-      top: initial;
-      left: initial;
-      right: 0;
-      bottom: 0;
+    margin-bottom: 10px;
+    @media screen and (min-width: 992px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-bottom: 0;
+
+      &--bottom {
+        top: initial;
+        left: initial;
+        right: 0;
+        bottom: 0;
+      }
     }
   }
   &__list {
     list-style: none;
     padding: 0;
+    margin-top: 0;
   }
   &__item {
     @include text($small-size, 400, $white);
@@ -44,7 +64,7 @@ $style: "car-parameters";
     }
   }
   &__img-wrapper {
-      @include padding-hack(70.1%, contain);
-      width: 100%;
+    @include padding-hack(70.1%, contain);
+    width: 100%;
   }
 }
