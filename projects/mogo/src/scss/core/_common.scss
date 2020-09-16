@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 100%;
+  min-height: 100vh;
+  font-family: $montserrat;
+  color: $N61;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+* + .uk-h1,
+* + .uk-h2,
+* + .uk-h3,
+* + .uk-h4,
+* + .uk-h5,
+* + .uk-h6,
+* + .uk-heading-2xlarge,
+* + .uk-heading-large,
+* + .uk-heading-medium,
+* + .uk-heading-small,
+* + .uk-heading-xlarge,
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+  margin-top: 0;
+}
+.uk-h1,
+.uk-h2,
+.uk-h3,
+.uk-h4,
+.uk-h5,
+.uk-h6,
+.uk-heading-2xlarge,
+.uk-heading-large,
+.uk-heading-medium,
+.uk-heading-small,
+.uk-heading-xlarge,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0 0;
+  font-family: $montserrat;
+}

@@ -5,6 +5,7 @@ $style: "menu";
   position: fixed;
   @include z-index(popup);
   @include position();
+  animation-duration: 0.4s;
   .uk-container {
     flex: 1;
     position: relative;

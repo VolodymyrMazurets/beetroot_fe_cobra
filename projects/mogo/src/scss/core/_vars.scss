@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto:ital@0;1&display=swap');
+
+// Image
+$img-path: '../img/';
+// Fonts 
+$montserrat: 'Montserrat', sans-serif;
+$kaushan: 'Kaushan Script', cursive;
+$roboto: 'Roboto', sans-serif;
+
+// Colors
+
+// Neutral
+$N0: #ffffff;
+$N10: rgba(255, 255, 255, 0.85);
+$N20: #f8f8f8;
+$N30: #f5f5f5;
+$N31: #e7e7e7;
+$N40: #e5e5e5;
+$N50: #dcdddd;
+$N60: #cccccc;
+$N61 : #999999;
+$N70: #555659;
+$N80: #494a4d;
+$N90: #333333; 
+$N00: #000000;
+$N000: #e7e7e7;
+
+// Red
+$R10: #f38181;
+
+// Yellow
+$Y10: #fce38a;
+
+// Green
+$G10: #246e26;
+
+// Blue
+$B10: #95e1d3;
+
+@function px_to_rem($target, $context: $base-size) {
+  @if $target==0 {
+    @return 0;
+  }
+
+  @return $target / $context + 0rem;
+}
+
+$base-size: 16px;
+
+/* ---FONT SIZE--- */
+$H1500: px_to_rem(150px);
+$H720: px_to_rem(72px);
+$H550: px_to_rem(55px);
+$H480: px_to_rem(48px);
+$H450: px_to_rem(45px);
+$H360: px_to_rem(36px);
+$H350: px_to_rem(35px);
+$H330: px_to_rem(33px);
+$H300: px_to_rem(30px);
+$H280: px_to_rem(28px);
+$H260: px_to_rem(26px);
+$H240: px_to_rem(24px);
+$H220: px_to_rem(22px);
+$H210: px_to_rem(21px);
+$H200: px_to_rem(20px);
+$H90: px_to_rem(19px);
+$H80: px_to_rem(18px);
+$H70: px_to_rem(17px);
+$H60: px_to_rem(16px);
+$H50: px_to_rem(15px);
+$H40: px_to_rem(14px);
+$H30: px_to_rem(13px);
+$H20: px_to_rem(12px);
+$H10: px_to_rem(11px);
+$H0: px_to_rem(10px);
+$H9: px_to_rem(9px);
