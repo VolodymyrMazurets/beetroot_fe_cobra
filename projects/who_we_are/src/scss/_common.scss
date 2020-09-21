@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  min-height: 100vh;
+}
+body {
+  font-size: 100%;
+  font-family: $main-font;
+  color: $dark-grey;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: auto;
+}
