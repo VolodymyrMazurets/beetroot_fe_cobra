@@ -1,45 +1,50 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 html,
 body {
-  font-size: 100%;
-  min-height: 100vh;
-  font-family: $montserrat;
-  color: $N61;
+    font-size: 100%;
+    min-height: 100vh;
+    font-family: $montserrat;
+    color: $N61;
 }
+
 ul,
 ol {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
+
 a {
-  &:hover {
-    text-decoration: none;
-  }
+    &:hover {
+        text-decoration: none;
+    }
 }
-* + .uk-h1,
-* + .uk-h2,
-* + .uk-h3,
-* + .uk-h4,
-* + .uk-h5,
-* + .uk-h6,
-* + .uk-heading-2xlarge,
-* + .uk-heading-large,
-* + .uk-heading-medium,
-* + .uk-heading-small,
-* + .uk-heading-xlarge,
-* + h1,
-* + h2,
-* + h3,
-* + h4,
-* + h5,
-* + h6 {
-  margin-top: 0;
+
+*+.uk-h1,
+*+.uk-h2,
+*+.uk-h3,
+*+.uk-h4,
+*+.uk-h5,
+*+.uk-h6,
+*+.uk-heading-2xlarge,
+*+.uk-heading-large,
+*+.uk-heading-medium,
+*+.uk-heading-small,
+*+.uk-heading-xlarge,
+*+h1,
+*+h2,
+*+h3,
+*+h4,
+*+h5,
+*+h6 {
+    margin-top: 0;
 }
+
 .uk-h1,
 .uk-h2,
 .uk-h3,
@@ -57,6 +62,53 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 0 0;
-  font-family: $montserrat;
+    margin: 0 0 0 0;
+    font-family: $montserrat;
+}
+
+*+address,
+*+dl,
+*+fieldset,
+*+figure,
+*+ol,
+*+p,
+*+pre,
+*+ul {
+    margin-top: 0;
+}
+
+address,
+dl,
+fieldset,
+figure,
+ol,
+p,
+pre,
+ul {
+    margin: 0;
+}
+
+.mogo-subtitle {
+    font-family: $kaushan;
+    @include text($H240, 400, $N90);
+    text-align: center;
+}
+
+.mogo-title {
+    @include text($H300, 700, $N90);
+    padding-bottom: 40px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    &:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        background-color: $R10;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

@@ -3,5 +3,8 @@
 @import "./core/mixins";
 @import "./core/common";
 
+@import './sections/menu';
+
 // SECTIONS
 @import "./sections/header";
+@import "./sections/about-us";

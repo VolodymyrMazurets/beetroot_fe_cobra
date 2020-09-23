@@ -37,7 +37,7 @@
     hyphens: auto;
   }
   
-  @mixin text($size, $weight: 400, $color: white) {
+  @mixin text($size, $weight: 400, $color: inherit) {
     font: {
       size: $size;
       weight: $weight;

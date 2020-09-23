@@ -1,0 +1,49 @@
+$style: "navigation";
+.#{$style} {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 28px 0;
+  &__container {
+    @include flex(space-between, center);
+  }
+  &__logo {
+    @include text($H300, 700, $N0);
+    @include transition(color);
+    &:hover {
+      color: darken($color: $N0, $amount: 10%);
+    }
+  }
+  &__list {
+    @include flex(flex-start, center);
+  }
+  &__list-item {
+    margin-right: 55px;
+    &:nth-last-child(2) {
+      margin-right: 42px;
+    }
+    &:nth-last-child(3) {
+      margin-right: 52px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__list-link {
+    @include text($H40, 400, $N0);
+    text-transform: uppercase;
+    padding-bottom: 12px;
+    border-bottom: 3px solid transparent;
+    @include transition(color, border-color);
+    &--border-less {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    &:hover {
+      border-bottom-color: $Y10;
+      color: $Y10;
+    }
+  }
+}
