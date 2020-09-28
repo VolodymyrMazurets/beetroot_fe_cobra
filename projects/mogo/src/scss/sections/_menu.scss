@@ -6,6 +6,11 @@ $style: "navigation";
   right: 0;
   z-index: 10;
   padding: 28px 0;
+  @include transition();
+  &._shadow {
+    background-color: rgba($R10, 0.90);
+    padding: 14px 0;
+  }
   &__container {
     @include flex(space-between, center);
   }

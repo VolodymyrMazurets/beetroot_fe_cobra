@@ -1,0 +1,67 @@
+$style: "what-we-do";
+.#{$style} {
+  padding: 112px 0 120px;
+  &__subtitle {
+    margin-bottom: 22px;
+  }
+  &__title {
+    margin-bottom: 46px;
+  }
+  &__text {
+    margin-bottom: 92px;
+  }
+  &__row {
+    @include flex(stretch, stretch);
+    margin: 0 -15px;
+  }
+  &__col {
+    padding: 0 15px;
+    flex: 1;
+    & .uk-accordion > :nth-child(n + 2) {
+      margin-top: 10px;
+    }
+  }
+  &__img-wrapper {
+    @include padding-hack(66.6%, cover);
+  }
+  &__item.uk-open {
+    .#{$style}__item-head::before {
+      background: url("../../img/what-we-do/ARROW-DOWN.svg") no-repeat center;
+      transform: rotate(180deg);
+    }
+  }
+  &__item-head {
+    border: solid 1px #e5e5e5;
+    height: 60px;
+    position: relative;
+    padding: 0 16px;
+    @include flex(flex-start, center);
+    @include text($H40, 400, $N90);
+    &:before {
+      background: url("../../img/what-we-do/ARROW-DOWN.svg") no-repeat center;
+      @include transition(transform);
+      position: absolute;
+      right: 20px;
+      top: 17px;
+      margin: 0;
+    }
+  }
+  &__item-inner {
+    @include text($H50, 400);
+    font-family: $roboto;
+    font-style: italic;
+    line-height: 1.6;
+    padding: 21px 25px 28px 20px;
+    border: 1px solid #e5e5e5;
+    margin: 0;
+    border-top: none;
+    max-height: 180px;
+  }
+  &__accordion-text {
+    overflow-y: auto;
+  }
+  &__icon {
+    margin-right: 16px;
+    color: $B10;
+  }
+}

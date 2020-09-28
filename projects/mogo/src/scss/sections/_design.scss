@@ -1,0 +1,33 @@
+$style: 'design';
+.#{$style} {
+    padding: 110px 0 0;
+    background: url('../../img/unique-design/unique-design-bg.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    &:before {
+        content: '';
+        @include position();
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.85);
+        z-index: 0;
+    }
+    &__container {
+        z-index: 1;
+        position: relative;
+        @include flex(flex-start, center, column);
+    }
+    &__subtitle {
+        margin-bottom: 22px;
+    }
+    &__title {  
+        margin-bottom: 45px;
+    }
+    &__tablet-wrapper {
+        position: relative;
+    }
+    &__phone-wrapper {
+        position: absolute;
+        right: -120px;
+        bottom: -90px;
+    }
+}

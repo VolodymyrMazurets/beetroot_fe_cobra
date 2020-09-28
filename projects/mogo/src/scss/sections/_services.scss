@@ -1,0 +1,31 @@
+$style: "services";
+.#{$style} {
+  padding: 0 0 120px;
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+  &__title {
+    margin-bottom: 66px;
+  }
+  &__card {
+    @include flex();
+    padding: 50px 34px;
+  }
+  &__icon {
+    @include size(34px);
+    color: $B10;
+  }
+  &__card-info {
+    padding-left: 30px;
+  }
+  &__card-title {
+    @include text($H40, 400, $N90);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__card-text {
+    font-family: $roboto;
+    line-height: 1.6;
+    @include text($H50, 400);
+  }
+}

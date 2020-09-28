@@ -1,81 +1,82 @@
 $style: "about-us";
 .#{$style} {
-    padding: 91px 0 110px;
-    &__container {
-        text-align: center;
-        padding-bottom: 110px;
-    }
-    &__title {
-        margin-bottom: 46px;
-    }
-    &__subtitle {
-        margin-bottom: 22px;
-    }
-    &__text {
-        font-family: $roboto;
-        @include text($H50, 400);
-        margin: 0 auto 100px;
-        line-height: 1.6;
-        max-width: 80%;
-    }
-    &__list {
-        @include flex(stretch, stretch);
-    }
-    &__list-item {
-        flex: 1;
-        padding: 0 15px;
-        @include transition;
-        &:hover {
-            transform: translate(-10px, -10px);
-            .#{$style}__hover-block {
-                box-shadow: 10px 10px 0 0 $B10;
-                @include flex(center, center, column);
-            }
-        }
-    }
-    &__img-wrapper {
-        @include padding-hack(66%, cover);
-    }
-    &__hover-block {
-        display: none;
-        position: absolute;
-        @include position;
-        background: linear-gradient( to top, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8)), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-    }
-    &__icon {
-        color: $N0;
-        margin-bottom: 12px;
-    }
-    &__hover-title {
-        @include text($H80, 700, $N0);
-        text-transform: uppercase;
-    }
-    &__numbers-wrapper {
-        background-color: $B10;
-        // display: none;
-        &._active {
-            display: block;
-        }
-    }
-    &__numbers {
-        @include flex(stretch, stretch);
-    }
-    &__numbers-item {
-        flex: 1;
-        padding: 90px 15px;
+  padding: 91px 0 110px;
+  &__container {
+    text-align: center;
+    padding-bottom: 110px;
+  }
+  &__title {
+    margin-bottom: 46px;
+  }
+  &__subtitle {
+    margin-bottom: 22px;
+  }
+  &__text {
+    margin-bottom: 100px;
+  }
+  &__list {
+    @include flex(stretch, stretch);
+  }
+  &__list-item {
+    flex: 1;
+    padding: 0 15px;
+    @include transition;
+    &:hover {
+      transform: translate(-10px, -10px);
+      .#{$style}__hover-block {
+        box-shadow: 10px 10px 0 0 $B10;
         @include flex(center, center, column);
-        border-right: 1px solid rgba($N0, .3);
-        border-left: 1px solid transparent;
-        &:first-child {
-            border-left-color: rgba($N0, .3);
-        }
+      }
     }
-    &__numbers-value {
-        @include text($H720, 700, $N0);
-        margin-bottom: 30px;
+  }
+  &__img-wrapper {
+    @include padding-hack(66%, cover);
+  }
+  &__hover-block {
+    display: none;
+    position: absolute;
+    @include position;
+    background: linear-gradient(
+        to top,
+        rgba(252, 227, 138, 0.8),
+        rgba(243, 129, 129, 0.8)
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  }
+  &__icon {
+    color: $N0;
+    margin-bottom: 12px;
+  }
+  &__hover-title {
+    @include text($H80, 700, $N0);
+    text-transform: uppercase;
+  }
+  &__numbers-wrapper {
+    background-color: $B10;
+    // display: none;
+    &._active {
+      display: block;
     }
-    &__numbers-description {
-        @include text($H40, 400, $N0);
-        text-transform: uppercase;
+  }
+  &__numbers {
+    @include flex(stretch, stretch);
+  }
+  &__numbers-item {
+    flex: 1;
+    padding: 90px 15px;
+    @include flex(center, center, column);
+    border-right: 1px solid rgba($N0, 0.3);
+    border-left: 1px solid transparent;
+    &:first-child {
+      border-left-color: rgba($N0, 0.3);
     }
+  }
+  &__numbers-value {
+    @include text($H720, 700, $N0);
+    margin-bottom: 30px;
+  }
+  &__numbers-description {
+    @include text($H40, 400, $N0);
+    text-transform: uppercase;
+  }
 }
