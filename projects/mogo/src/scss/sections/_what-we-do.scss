@@ -56,9 +56,21 @@ $style: "what-we-do";
     margin: 0;
     border-top: none;
     max-height: 180px;
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: $N30;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: $B10;
+      border-radius: 3px;
+    }
   }
   &__accordion-text {
     overflow-y: auto;
+    height: 108px;
+    padding-right: 25px;
   }
   &__icon {
     margin-right: 16px;

@@ -19,3 +19,7 @@ document.addEventListener('scroll', () => {
 
   } else nav.classList.add("nav--filled");
 });
+
+AOS.init({
+  duration: 1000
+});

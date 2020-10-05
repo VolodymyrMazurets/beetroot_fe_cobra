@@ -10,10 +10,25 @@ $style: "services";
   &__card {
     @include flex();
     padding: 50px 34px;
+    &:hover {
+      .#{$style}__icon {
+        svg {
+          path {
+            fill: $B10;
+          }
+        }
+      }
+    }
   }
   &__icon {
     @include size(34px);
     color: $B10;
+    svg {
+      path {
+        @include transition();
+        fill: transparent;
+      }
+    }
   }
   &__card-info {
     padding-left: 30px;

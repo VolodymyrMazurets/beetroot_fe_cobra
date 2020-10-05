@@ -7,6 +7,7 @@
 	<title>Tesla Lending Page</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -63,10 +64,10 @@
 
 		<div class="header__info">
 			<div class="uk-container">
-				<h1 class="header__title">Roadster</h1>
-				<p class="header__text">Самый быстрый автомобиль в мире, с рекордным ускорением, дальностью и
+				<h1 data-aos="fade-right" class="header__title">Roadster</h1>
+				<p data-aos="fade-right" data-aos-delay="300" class="header__text">Самый быстрый автомобиль в мире, с рекордным ускорением, дальностью и
 					производительностью.</p>
-				<a href="#" class="tesla-button">Хочу тест драйв</a>
+				<a data-aos="fade-right" data-aos-delay="600" href="#" class="tesla-button">Хочу тест драйв</a>
 			</div>
 		</div>
 
@@ -132,14 +133,14 @@
 						<li class="car-parameters__item">из когда-либо созданных</li>
 					</ul>
 				</div>
-				<div class="car-parameters__col">
+				<div data-aos="flip-left" class="car-parameters__col">
 					<div class="car-parameters__img-wrapper">
 						<img src="./img/exterier.jpg" alt="">
 					</div>
 				</div>
 			</div>
 			<div class="car-parameters__row">
-				<div class="car-parameters__col car-parameters__col--ordered">
+				<div data-aos="flip-right" class="car-parameters__col car-parameters__col--ordered">
 					<div class="car-parameters__img-wrapper">
 						<img src="./img/interier.jpg" alt="">
 					</div>
@@ -199,6 +200,7 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script src="js/bundle.js"></script>
 </body>
 
