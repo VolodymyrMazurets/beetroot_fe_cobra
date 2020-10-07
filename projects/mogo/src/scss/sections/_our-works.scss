@@ -1,0 +1,32 @@
+$style: 'our-works';
+.#{$style} {
+    padding: 110px 0 130px;
+    &__subtitle {
+        margin-bottom: 22px;
+    }
+    &__title {
+        margin-bottom: 46px;
+    }
+    &__row {
+        @include flex(stretch, stretch);
+        padding: 100px 0;
+    }
+    &__col {
+        width: 50%;
+        flex: 1 1 50%;
+        @include flex(stretch, stretch, row, wrap);
+    }
+    &__img-wrapper {
+        width: 50%;
+        flex: 1 1 50%;
+        @include padding-hack(40.8%, cover);
+        &--big {
+            padding-bottom: 81.6%;
+        }
+        &--last-col {
+            width: 100%;
+            flex-basis: 100%;
+            padding-bottom: 81.6%;
+        }
+    }
+}

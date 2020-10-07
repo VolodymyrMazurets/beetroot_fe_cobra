@@ -1,0 +1,83 @@
+$style: "who-we-are";
+.#{$style} {
+  padding: 100px 0 116px;
+  &__subtitle {
+    margin-bottom: 22px;
+  }
+  &__title {
+    margin-bottom: 46px;
+  }
+  &__text {
+    margin-bottom: 92px;
+  }
+  &__list {
+    @include flex(stretch, stretch);
+    margin: 0 -15px;
+  }
+  &__item {
+    padding: 0 15px;
+    flex: 1;
+    &:hover {
+      .#{$style}__img-wrapper {
+        transform: translate(-10px, -10px);
+      }
+      .#{$style}__hover-block {
+        box-shadow: 10px 10px 0 0 $B10;
+        @include flex(center, center, column);
+      }
+    }
+  }
+  &__hover-block {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    @include position;
+    background: linear-gradient(
+        to top,
+        rgba(252, 227, 138, 0.8),
+        rgba(243, 129, 129, 0.8)
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  }
+  &__social {
+      @include flex(center, center); 
+  }
+  &__social-item {
+      @include size(56px);
+      border-right: 1px solid $R10;
+      display: flex;
+      &:last-child {
+          border-right-color: transparent;
+      }
+      a {
+          @include flex(center, center);
+          flex: 1;
+          background-color: $Y10;
+          color: $R10;
+          @include transition(background-color, color);
+          &:hover {
+              background-color: $R10;
+              color:$N0;
+          }
+      }
+  }
+  &__img-wrapper {
+    @include padding-hack(124%, cover);
+    @include transition(transform);
+  }
+  &__info {
+    padding: 30px 0 0;
+    text-align: center;
+  }
+  &__name {
+    @include text($H40, 700, $N90);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  &__position {
+    @include text($H50, 300, $N90) {
+      font-family: $roboto;
+      font-style: italic;
+    }
+  }
+}

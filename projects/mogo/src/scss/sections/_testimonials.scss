@@ -2,41 +2,4 @@ $style: 'testimonials';
 .#{$style} {
     background-color: $N20;
     padding: 70px 0;
-    &__slide {
-        @include flex(flex-start, center);
-        padding: 0 10%;
-    }
-    &__img-wrapper {
-        @include size(150px);
-        border: 3px solid $B10;
-        color: $B10;
-        @include flex(center, center);
-        margin-right: 60px;
-    }
-    &__text {
-        font-family: $roboto;
-        font-style: italic;
-        @include text($H240, 300, $N61);
-        margin-bottom: 24px;
-        line-height: 1.5;
-    }
-    .#{$style}__info &__author {
-        font-family: $kaushan;
-        @include text($H240, 400, $N90);
-        @include flex(flex-start, center);
-        &:before {
-            content: '';
-            width: 60px;
-            height: 3px;
-            background-color: $R10;
-            margin-right: 10px;
-            display: inline-block;
-        }
-    }
-    .#{$style}__slider &__arrow {
-        color: $N60;
-        &:hover, &:active, &:focus {
-            color: $B10;
-        }
-    }
 }
